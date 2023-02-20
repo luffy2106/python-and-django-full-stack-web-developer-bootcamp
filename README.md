@@ -1,21 +1,21 @@
 
-2. How web work ? \
-Full stack :
-* Front-End : 
+### 2. How web work ? \
+####  Full stack :
+#####  Front-End : 
 - HTML, CSS, Javascript. 
 - JQuery allows you to easily manipulate the contents of an HTML document by manipulating elements, classes, and IDs, while HTML allows you to only display the content of a webpage.
 - Bootstrap : contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation and other interface components
 - The differencen between CSS and HTML: The main difference between CSS and HTML is that CSS is used to style and layout web pages while HTML is used for the structure and content of a web page. In other words, HTML contains the information about the web page (text, images, media, etc.) while CSS determines how that information is displayed to users.
 - Javascript allows you to add interactiity to the websit, including programming logic.
-* Back_end:
+##### Back_end:
 - The language : Python
 - The framework : Django
 - The database : SQLite
 
  
-3. HTML basics
+#### 3. HTML basics
 * structure
-*-* basic taggings : head, body, title, text style ..  (https://www.w3schools.com/TAGS/default.asp)
+* basic taggings : head, body, title, text style ..  (https://www.w3schools.com/TAGS/default.asp)
 * Lists:
 - odrder list
 - unordered list
@@ -27,7 +27,7 @@ Both elements can have attributes, such as a id attribute which can be used for 
 * Attributes
 - Add more information to HTML tags. Ex : link or referencing an image ...
 
-4. HTML advanced
+### 4. HTML advanced
 * Table
 * Forms basics : form, field, buttom...
 * Forms and labels
@@ -36,7 +36,7 @@ Both elements can have attributes, such as a id attribute which can be used for 
 - Drop down menus
 - Text Area Inputs
 
-5. CSS level one basics
+### 5. CSS level one basics
 - CSS describe how HTML elements are displayed on the page
 - we can either define styling inside an HTML file or create .css file and then link to the html file. 
 
@@ -78,19 +78,6 @@ For example: If we want to set color for the top priority items instead of all i
 
 More tricks :
 https://designshack.net/articles/css/what-the-heck-is-css-specificity/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
