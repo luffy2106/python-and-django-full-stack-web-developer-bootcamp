@@ -1,5 +1,5 @@
 
-2. How web work ?
+2. How web work ? \
 Full stack :
 * Front-End : 
 - HTML, CSS, Javascript. 
