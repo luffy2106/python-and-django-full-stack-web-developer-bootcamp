@@ -14,24 +14,25 @@
 
  
 #### 3. HTML basics
-* structure
-* basic taggings : head, body, title, text style ..  (https://www.w3schools.com/TAGS/default.asp)
-* Lists:
+###### structure
+###### basic taggings : 
+Head, body, title, text style ..  (https://www.w3schools.com/TAGS/default.asp)
+###### Lists:
 - odrder list
 - unordered list
-* Nested list
-* <div> and <span> tags
-The <div> and <span> elements are structural elements used to create divisions and sections within an HTML document. The <div> element is a generic container which can be used for any purpose - it is generally used for larger divisions of content, such as sections of a page. The <span> element is used for smaller sections of content, such as a single word or phrase, and it does not set apart the content from other sections of the same document.
+###### Nested list
+###### div and span tags
+The div and span elements are structural elements used to create divisions and sections within an HTML document. The <div> element is a generic container which can be used for any purpose - it is generally used for larger divisions of content, such as sections of a page. The <span> element is used for smaller sections of content, such as a single word or phrase, and it does not set apart the content from other sections of the same document.
 
 Both elements can have attributes, such as a id attribute which can be used for styling with CSS. They can also contain text, images, and other elements 
-* Attributes
+###### Attributes
 - Add more information to HTML tags. Ex : link or referencing an image ...
 
 ### 4. HTML advanced
-* Table
-* Forms basics : form, field, buttom...
-* Forms and labels
-* Forms and selections:
+###### Table
+###### Forms basics : form, field, buttom...
+###### Forms and labels
+###### Forms and selections:
 - Radio button(linked)
 - Drop down menus
 - Text Area Inputs
@@ -44,17 +45,17 @@ reference:
 
 https://www.w3schools.com/css/
 
-* CSS level one part one
+###### CSS level one part one
 - you can specify property of element in html in css file
 - use color picker to specify color
 
-* CSS level one part two
+###### CSS level one part two
 Set up parameters of body, div, p, span ...
 - Set background of container
 - Set up border parameters
 - Set up text parameters
 
-* CSS level one part three
+###### CSS level one part three
 - CSS selectors : select subset of single of elements in html : user "ids" to target single element and use "classes" to target group of elements and combine them. 
 
 Other types of selectors :
@@ -62,11 +63,11 @@ Other types of selectors :
 https://www.w3schools.com/cssref/css_selectors.php
 
 
-* CSS level one part four
+###### CSS level one part four
 
 If you want to see page in html code, right click and choose "inspect". The elements of html is on the left and Css styles is on the right.
 
-* CSS level one part five
+###### CSS level one part five
 
 CSS specificity : It defines the hierarchy of CSS styling and what types of tags overrule. To be more specific:
 
@@ -78,7 +79,5 @@ For example: If we want to set color for the top priority items instead of all i
 
 More tricks :
 https://designshack.net/articles/css/what-the-heck-is-css-specificity/
-
-
 
 # python-and-django-full-stack-web-developer-bootcamp
