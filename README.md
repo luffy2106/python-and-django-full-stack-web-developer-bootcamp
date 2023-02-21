@@ -1,23 +1,28 @@
+# Python-and-django-full-stack-web-developer-bootcamp
 
-### 2. How web work ? \
-####  Full stack :
-#####  Front-End : 
+### 1. Introduction
+
+Materials (see on the website)
+
+### 2. How web work ? 
+####  Full stack
+#####  Front-End 
 - HTML, CSS, Javascript. 
 - JQuery allows you to easily manipulate the contents of an HTML document by manipulating elements, classes, and IDs, while HTML allows you to only display the content of a webpage.
 - Bootstrap : contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation and other interface components
 - The differencen between CSS and HTML: The main difference between CSS and HTML is that CSS is used to style and layout web pages while HTML is used for the structure and content of a web page. In other words, HTML contains the information about the web page (text, images, media, etc.) while CSS determines how that information is displayed to users.
-- Javascript allows you to add interactiity to the websit, including programming logic.
-##### Back_end:
+- Javascript allows you to add interactivity to the website, including programming logic.
+##### Back-end
 - The language : Python
 - The framework : Django
 - The database : SQLite
 
  
 #### 3. HTML basics
-###### structure
-###### basic taggings : 
+###### Structure
+###### Basic taggings  
 Head, body, title, text style ..  (https://www.w3schools.com/TAGS/default.asp)
-###### Lists:
+###### Lists
 - odrder list
 - unordered list
 ###### Nested list
@@ -32,7 +37,7 @@ Both elements can have attributes, such as a id attribute which can be used for 
 ###### Table
 ###### Forms basics : form, field, buttom...
 ###### Forms and labels
-###### Forms and selections:
+###### Forms and selections
 - Radio button(linked)
 - Drop down menus
 - Text Area Inputs
@@ -80,4 +85,54 @@ For example: If we want to set color for the top priority items instead of all i
 More tricks :
 https://designshack.net/articles/css/what-the-heck-is-css-specificity/
 
-# python-and-django-full-stack-web-developer-bootcamp
+
+### 6. CSS level two advanced
+
+###### Introduction
+- Font properties such as size, weight, text alignment ...
+- How to download and change fonts
+
+
+###### Fonts
+
+You can set a properties like font size of one paragraph is double larger than the size of another paragraph(by setting default font size for the text body and let other paragraphs double or tripple this size).
+
+You can see the list of font in here(in case your os does not have proper fonts, you can have the ref in html and specify in css):
+- fonts.google.com 
+- fontlibrary.org
+
+###### Box model
+
+CSS box model dictate how HTML elements should look like(padding, border, margin ...)
+
+Visualization and color palette css for the color : coolors.co
+
+### 8. Bootstrap Overview
+
+Bootstrapis a common framework used for Front-End Development
+
+Take a look at https://getbootstrap.com/docs/5.3/examples/ to see:
+- Template reference
+- Components (form, progress bar, button ...)
+
+You can download css template or CDN(online host for you to connect to) to link to your html
+###### Buttons
+Click on CSS sections in the website and just copy the code 
+- Container
+- Jumbotron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
