@@ -111,15 +111,163 @@ Visualization and color palette css for the color : coolors.co
 
 Bootstrapis a common framework used for Front-End Development
 
-Take a look at https://getbootstrap.com/docs/5.3/examples/ to see:
-- Template reference
+Take a look at https://getbootstrap.com/docs/5.3/examples/ (*)to see:
+- Template reference for CSS
 - Components (form, progress bar, button ...)
 
 You can download css template or CDN(online host for you to connect to) to link to your html
 ###### Buttons
-Click on CSS sections in the website and just copy the code 
+Click on CSS sections in the website (*) and just copy the code 
 - Container
 - Jumbotron
+- Buttom
+###### Forms
+- Form for multipple option
+- Form to fill in id and pass
+- Text area
+- Form checked
+- Check box
+
+###### Navbars
+Require Javascripts plug-in
+- Create link or list of link to another host(the location of navbar can be specified)
+- The navbar location can be fixed even when we scroll up or down
+- Hamburger menu
+- Drop-down icons
+
+###### Grids
+The grid system provides the core mechanism by which using Bootstrap allows websites to look good across multiple devices of multiple screen sizes.
+
+Example :
+- If there is a table, then the columns in the table will not be merged even you scetch the website
+- Split one column into 2 small columns in flexible way
+See more examples in :
+https://getbootstrap.com/docs/5.3/examples/grid/
+
+
+###### Bootstrap project
+- Thumbnails : easily display girds of images, videos, text and more ...
+- Form for email and password
+- Buttom
+- Checkbox 
+- Navbar to link to another website
+
+### 9. Javascript Basics
+- Build directly into the website
+- Make the website more interactive
+- Written in .js file then connect to our html
+
+###### Javascripts basics
+Basics syntaxs : alert, log, prompt ...
+
+###### Connecting Javascripts 
+Exercices + solutions
+
+###### Operators
+###### Control Flow
+###### While Loops
+###### For Loops
+
+### 10. Javascript Level Two
+
+###### Functions
+###### Arrays
+String is immutable but Arrays is mutable
+###### Objects
+- Similar to dictionary in python, the value of a key can be a function
+- How to use this keyword : to call variable inside the object
+
+### 11. Document Object Model(DOM)
+The DOM will allow us to interface our Javascript code to interact with HTML and CSS
+
+###### DOM interaction
+A document object(DOM) include all parameters of a webpage and html elements are one of them. Some important attributes:
+- document.URL
+- document.body
+- document.head
+- document.links
+
+Method for grabbing elements:
+- document.getElementById()
+- document.getElementByClassName()
+- document.getElementsByTagName()
+- document.querySelector()
+- document.querySelectorAll()
+
+###### Content interactions
+How to change text, HTML code and attributes
+
+###### Events
+Set up interaction to occur on a particular event, such as a click or a hover. Ex : Listening for an event looks like this myvariable.addEventListener(event, func)
+Other events:
+- Clicks(Ex : click on text and it changes the colors)
+- Hovers(mouseover, mouseout like. Ex : if you move mouse from text, it change the colors)
+- Double clicks
+- Drags
+...
+https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+### 12. jQuery
+- jQuery is a Javascript library. Other library could be notify as Angular, React, NodeJS
+- It is just a large single .js file that has many pre-built methods and objects that simplify your workflow
+- Specifically interacting with the DOM and making HTTP requests (AJAX)
+
+How do we get JQuery:
+- Link a CDS hosted file(like we did for a bootstrap). See example in video 84. jQuery Project Solution Part One
+- Download the .js file from jQuery's official web
+- Jquery can replace Vanila code JS by more simple line of code
+
+Reference for Jquery:
+https://code.jquery.com
+
+###### jQuery Events
+
+###### jQuery Project
+
+Build interactive game between 2 persons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
