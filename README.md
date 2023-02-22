@@ -228,7 +228,9 @@ https://code.jquery.com
 Build interactive game between 2 persons
 
 
+### 13. Backend introduction
 
+Take a look at Django overview slide
 
 
 
