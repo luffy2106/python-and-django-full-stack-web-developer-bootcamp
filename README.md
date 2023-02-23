@@ -227,10 +227,58 @@ https://code.jquery.com
 
 Build interactive game between 2 persons
 
-
 ### 13. Backend introduction
 
-Take a look at Django overview slide
+There are 3 files : urls.py, views.py, models.py
+Take a look at Django overview slide. How it work:
+Basically a user will request a URL on your website, something like www.helloworld.com. Then it goes to a urls.py which is then going to call the views.py file in Django. The the URLS are connect to views through a simple call and then that will call your model.py, which contains all the information of your database and the that will query your database for the information, feed it back to views.py, which create the view of your website(what is in the web), then we fill out that view with html, css and JavaScript and we send that back to the user.
+
+### 16. Django basics
+
+It's a web framework, which allows to solve 2 main problems:
+- Map a requested URL from a userto the code that's actually meant to handle it
+- Create the requested htmp dynamically
+=> To sum up, it helps to connect back-end and front-end
+It was used by Instagram, Mozilla ...
+
+###### Django Project
+- A Django Project is a collection of applications and configurations that when combined together will make up the full web application(your complete website running with Django).
+- Create Django project : django-admin startproject first_project
+
+Components :
+- __init__.py : This a blank Python script that due to its special name let's Python know that this directory can be treated as a package
+- settings.py : This is where you will store all your project settings
+- urls.py : This is a python script that store all the URL patterns for your project. Basically the different pages of your web application and how they should connect to the end user.
+- wsgi.py : This is a Python Script that acts as the Web Server Gateway Interface. It will later on help us deploy our web to production 
+- manage.py : This is a Python Script that we will use a lot. It will be associates with many commands as we build our web app.
+
+###### Django application
+- A Django Application is created to perform a particular functionality for your entire web application. For example you could have a registration app, a polling app, comments app, etc.
+- These Django Apps can then be plugged into other Django Projects, so you can reuse them! (Or use other people’s apps).
+- Create Django appt : python manage.py startapp first_app
+
+Components :
+- __init__.py : This a blank Python script that due to its special name let's Python know that this directory can be treated as a package
+- admint.py : You can register your models here which Django will then use them with Django’s admin interface.
+- apps.py : Here you can place application specific configurations.
+- models.py : Here you store the application’s data models.
+- test.py : Here you can store test functions to test your code.
+- views.py : This is where you have functions that handle requests and return responses.
+- Migrations folder : This directory stores database specific information as it relates to the models
+
+###### Django challenge
+
+You need to :
+- Create a function in view.py to specify the repsonse
+- add URL patterns in urls.py to set up where the request should be sent to views.py, get info in the function in views.py and send back to the frontend
+
+###### Django URL Mappings
+
+In previous section we map urls.py to views.py. Now we use include() function from django.conf.urls to link urls.py to views.py by another file(undirectly)
+
+
+
+
 
 
 
