@@ -278,6 +278,9 @@ In previous section we map urls.py to views.py. Now we use include() function fr
 
 
 ###### Template
+
+Template to insert simple text
+
 - The template will contain the static parts of an html page (parts that are always the same)
 - Then there are template tags, which have their own special syntax. This syntax allows you to inject dynamic content that your Django App’s views will produce, effecting the final HTML.
 
@@ -285,8 +288,64 @@ Steps need to be done:
 - we should create a templates directory and then a subdirectory for each specific app’s templates. It goes inside of your top level directory:
 first_project/templates/first_app.
 - The next step is to let Django know of the templates by editing the DIR key inside of the TEMPLATES dictionary in the settings.py file.
+- The issuse could evole when we try to install software in different OS, there will be a problem related to the path
+=> We can use the os module to feed the path to the DIR key inside of the TEMPLATES dictionary(see variable BASE_DIR in settings.py)
+- Once we’ve done that we can create an html file called index.html inside of the templates/first_app directory
+- Inside this HTML file we will insert template tags (a.k.a Django Template Variable). These template variables will allow us to inject content into the HTML directly from Django.
 
-The issuse could evole when we try to 
+To sum up, Django is able to inject content into the html and retrive data from database. How to do that:
+- We will use the render() function and place it into our original index() function inside of our views.py file.
+
+###### Static Files
+
+Static is to insert static files(ex : user's photo)
+
+Steps need to be done:
+- we will create a new directory inside of the project called static ( just like we did for templates)
+- The next step is to let Django know of the Static by editing the DIR key inside of the static dictionary in the settings.py file.
+- We will also add a STATIC_URL variable
+- we need a place to store our static image files(a directory)
+- To test that this all worked you can go to: 127.0.0.1:8000/static/images/pict.jpg. That will confirm that the paths are set up and connected properly.
+- But what we really want to do is set up a template tag for this! To do this inside an html file, we add in a few specific tags, at the top:
+{% load staticfiles %}
+- Then we want to insert the image with an HTML <img src= > style tag using: <img src={%static “images/pic.jpg” %} />
+- Notice how this template tag for static files is a little different in that it uses {% %} instead of {{ }}
+
+
+### 17. Django Level Two
+
+###### Models overview
+- We use  Models to incorporate a database into a Django Project
+- Django comes equipped with SQLite
+
+Steps need to be done:
+- In the settings.py file you can edit the ENGINE parameter used for DATABASES
+- To create an actual model, we use a class structure inside of the relevant applications models.py file. This class object will be a subclass of Django’s built-in class: django.db.models.Model. Then each attribute of the class represents a field, which is just like a column name with constraints in SQL.
+
+Each model can be understand as an SQL table, it has attributes, constraints(unique or not) and can have relationship with another table. Examle in models.py
+
+class Topic(models.Model):
+	top_name = models.CharField(max_length=264, unique=True)
+
+class Webpage(models.Model):
+	category = models.ForeignKey(Topic)
+    name = models.CharField(max_length=264)
+	url = models.URLField()
+
+After we’ve set up the models we can migrate the database. This basically let’s Django do the heavy lifting of creating SQL databases that correspond to the models we created. Django can do this entire process with a simple command:
+- python manage.py migrate 
+Then register the changes to your app, shown here with some generic “app1”:
+- python manage.py makemigrations app1
+
+In order to use the more convenient Admin interface with the models however, we need to register them to our application’s admin.py file.
+In order to fully use the database and the Admin, we will need to create a “superuser”, Providing a name, email, and password
+You can use Faker library to test your app.
+
+
+###### Creating models
+Implement in code(take a look at the video)
+
+###### Population scripts
 
 
 
