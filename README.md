@@ -277,6 +277,18 @@ You need to :
 In previous section we map urls.py to views.py. Now we use include() function from django.conf.urls to link urls.py to views.py by another file(undirectly)
 
 
+###### Template
+- The template will contain the static parts of an html page (parts that are always the same)
+- Then there are template tags, which have their own special syntax. This syntax allows you to inject dynamic content that your Django App’s views will produce, effecting the final HTML.
+
+Steps need to be done:
+- we should create a templates directory and then a subdirectory for each specific app’s templates. It goes inside of your top level directory:
+first_project/templates/first_app.
+- The next step is to let Django know of the templates by editing the DIR key inside of the TEMPLATES dictionary in the settings.py file.
+
+The issuse could evole when we try to 
+
+
 
 
 
