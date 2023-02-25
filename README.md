@@ -263,7 +263,7 @@ Components :
 - apps.py : Here you can place application specific configurations.
 - models.py : Here you store the application’s data models.
 - test.py : Here you can store test functions to test your code.
-- views.py : This is where you have functions that handle requests and return responses.
+- views.py : This is where you have functions that receive HTTP requests from clients and return HTTP responses with the content to be displayed.
 - Migrations folder : This directory stores database specific information as it relates to the models
 
 ###### Django challenge
@@ -346,6 +346,27 @@ You can use Faker library to test your app.
 Implement in code(take a look at the video)
 
 ###### Population scripts
+
+Populate models with some dummy data
+
+###### Django - MTV (Models-Template-Views)
+
+Django operates on what is known as Models-Templates-Views(3 of them are connect to each other)
+1. In views.py, We import any models that we will need to use
+2. Use the view to query the model for data that we will need
+3. Pass models to the template
+4. Edit the template so that it is ready to accept and disply the data from the model
+5. Map URL to the view
+These methods will help us manipulate what is displayed on the web page
+Example we can practice by:
+- Generating a table
+- The table will display all the webpage and access records from the AccessRecord database we created and populated
+- We will use template tagging to connect to the html page
+
+
+
+
+
 
 
 

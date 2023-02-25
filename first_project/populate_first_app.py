@@ -1,7 +1,7 @@
 import os
 #Set the environment
 os.environ.setdefault('DJANGO_SETTING_MODULE', 'first_project.settings')
-# export DJANGO_SETTINGS_MODULE=first_project.settings
+# export DJANGO_SETTINGS_MODULE=first_project.settings (you need to run this command if you are using linux)
 import django
 django.setup()
 
