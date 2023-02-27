@@ -259,7 +259,7 @@ Components :
 
 Components :
 - __init__.py : This a blank Python script that due to its special name let's Python know that this directory can be treated as a package
-- admint.py : You can register your models here which Django will then use them with Django’s admin interface.
+- admin.py : You can register your models here which Django will then use them with Django’s admin interface.
 - apps.py : Here you can place application specific configurations.
 - models.py : Here you store the application’s data models.
 - test.py : Here you can store test functions to test your code.
@@ -335,7 +335,7 @@ class Webpage(models.Model):
 After we’ve set up the models we can migrate the database. This basically let’s Django do the heavy lifting of creating SQL databases that correspond to the models we created. Django can do this entire process with a simple command:
 - python manage.py migrate 
 Then register the changes to your app, shown here with some generic “app1”:
-- python manage.py makemigrations app1
+- python manage.py make migrations app1
 
 In order to use the more convenient Admin interface with the models however, we need to register them to our application’s admin.py file.
 In order to fully use the database and the Admin, we will need to create a “superuser”, Providing a name, email, and password
