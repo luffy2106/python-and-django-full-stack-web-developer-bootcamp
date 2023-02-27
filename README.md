@@ -364,6 +364,64 @@ Example we can practice by:
 - We will use template tagging to connect to the html page
 
 
+### 18. Django Level Three
+
+Django Forms : Used to accept User input and connect it to the database and retrieve it later on. It has these features :
+- Generate HTML form widgets
+- Validate data and process it into a Python data structure
+- Create form versions of our models, quickly update models from Forms
+
+Steps need to be done:
+- Create a forms.py inside the application
+- Call Django's built in forms classes(similar to creating models)
+
+Example:
+from django import forms
+class FormName(forms.Form):
+	name = forms.CharField()
+	email = forms.EmailField()
+	text = forms.CharField(widget=forms.Textarea)
+
+- We can then create a new view for the form:
+
+def form_name_view(request):
+	form = forms.FormName()
+	return render(request,’form_name.html’,
+							{‘form’:form})
+
+
+- Then we just add the view to the app’s urls, either directly or with include(). Directly:
+
+from basicapp import views
+urlpatterns = [
+url(r’formpage/’,views.form_name_view,
+    name = ‘form_name’),
+]
+
+- We can then create the templates folder along with the html file that will hold the template tagging for the form.
+- Remember to update the settings.py file to reflect the TEMPLATE_DIR variable!
+- Go into the form_name.html file inside templates/basicapp and add in the actual template tagging that will create the Django Form! You can just pass in the key from the context dictionary {{ form }}
+
+3 main topics of connection:
+- HTTP : communication between a client and a server
+- GET : requests data from a resource
+- POST : submits data to be a process to a resource
+
+Remember:
+- Take a look at how to insert FORM in file html( {{form.as_p}} in bootstrap will give you to have form that means top down instead of that left to right)
+- {% csrf_token %} : Cross-Site Request Forgery (CSRF) token, which secures the HTTP POST action that is initiated on the subsequent submission of a form. The Django framework requires the CSRF token to be present !!
+- We need to inform the view that if we get a POST back, we should check if the data is valid and if so, grab that data. We can do it by editing the view.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
