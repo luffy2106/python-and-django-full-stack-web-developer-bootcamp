@@ -366,7 +366,8 @@ Example we can practice by:
 
 ### 18. Django Level Three
 
-Django Forms : Used to accept User input and connect it to the database and retrieve it later on. It has these features :
+###### Django Forms 
+Used to accept User input and connect it to the database and retrieve it later on. It has these features :
 - Generate HTML form widgets
 - Validate data and process it into a Python data structure
 - Create form versions of our models, quickly update models from Forms
@@ -374,6 +375,8 @@ Django Forms : Used to accept User input and connect it to the database and retr
 Steps need to be done:
 - Create a forms.py inside the application
 - Call Django's built in forms classes(similar to creating models)
+
+###### Form Basics Code Along
 
 Example:
 from django import forms
@@ -411,6 +414,38 @@ Remember:
 - Take a look at how to insert FORM in file html( {{form.as_p}} in bootstrap will give you to have form that means top down instead of that left to right)
 - {% csrf_token %} : Cross-Site Request Forgery (CSRF) token, which secures the HTTP POST action that is initiated on the subsequent submission of a form. The Django framework requires the CSRF token to be present !!
 - We need to inform the view that if we get a POST back, we should check if the data is valid and if so, grab that data. We can do it by editing the view.
+
+###### Form Validation
+- Use hidden fields for custom field validation
+- This set up is not only for users but also "bots"(it can detect and forbiden bot by some rules we define)
+
+We will work on the following:
+- Adding a check for empty fields
+- Adding a check for a bot
+- Adding a clean method for the entire form
+- Adding email check
+
+Take a look at Django_Level_Three/basicforms/basicapp/forms.py to see the implementation
+
+###### Model Forms
+- Model form can take form input and passing it to a model
+- Instead of using forms.Form, we will use forms.ModelForm
+
+
+We need to use Meta class to provides information connecting the model to the form. Remember:
+- The fields attribute will connect to the model
+
+There are 3 ways to declate the fields:
+- You don't need to specify the fields if you want securities and you can have the form be generated from the model : Set it to "__all__"
+- If you don't care much the securites, you can exclute certain fields ["field1", "field2"]
+- You can list included fields
+
+###### Model Forms Exercise
+
+
+
+
+
 
 
 

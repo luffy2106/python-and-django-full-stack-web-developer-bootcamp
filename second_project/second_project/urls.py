@@ -19,6 +19,6 @@ from appTwo import views
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('admin/', admin.site.urls),
-    path('users', include('appTwo.urls'))
-    
+    path('users', include('appTwo.urls')),
+    path('users_sign_up', views.users_sign_up, name="users_sign_up")
 ]
