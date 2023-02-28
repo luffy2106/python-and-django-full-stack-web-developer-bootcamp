@@ -442,6 +442,31 @@ There are 3 ways to declate the fields:
 
 ###### Model Forms Exercise
 
+- Create a ModelForm in forms.py
+- Connect the form in the template
+- Edit views.py to show the form
+- Figure out how to save() the data
+- Verify the model is admin registered 
+
+
+### 19. Django Level Four
+
+Template and template tagging
+
+So far template is a way to inject simple pieces into our html files. But template has more capabilities:
+- Instead of creating individually for each html file, we can use base template and inherit that template in the .html files
+- Avoid hard code URL path
+- Adjust variables on indivisual page by built-in variables
+
+###### Relatives URLS with Templates
+
+We Could also just directly reference the view. For example:
+<a href="basicapp/thankyou"> Thanks</a>
+Can be changed to:
+<a href="{% url'basicapp.views.thankyou'%}">Thanks</a>
+
+The suggested (and most future-proof) method to do all of this involves the urls.py file. Inside the urls.py file  you add in the variable app_name. You then set this variable equal to a string that is the same as your app name.
+
 
 
 
