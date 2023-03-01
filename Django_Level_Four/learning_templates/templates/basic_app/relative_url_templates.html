@@ -9,6 +9,12 @@
 
 <body>
     <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+    <!-- <a href="basic_app/relative_url_templates.html">THE RELATIVE PAGE</a> -->
+    <!-- <a href="basic_app/other.html">THE OTHER PAGE</a> -->
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a>
+    <a href="{% url 'admin:index' %}">LINK TO ADMIN</a>
+    <a href="{% url 'index' %}">LINK TO INDEX</a>
+
 </body>
 
 </html>

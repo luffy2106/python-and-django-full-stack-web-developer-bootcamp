@@ -467,6 +467,93 @@ Can be changed to:
 
 The suggested (and most future-proof) method to do all of this involves the urls.py file. Inside the urls.py file  you add in the variable app_name. You then set this variable equal to a string that is the same as your app name.
 
+###### URL Template Inheritance
+
+Template inheritance allows us to create a base template we can inherit from => saves us a lot of repetitive work and makes it much easier to maintain the same base look and feel across our entire website!
+
+Example:
+- If we wanted a navbar at the top of our page, it wouldn’t make sense to continually have the same navbar HTML code in each individual .html file.
+- Instead we set it to the base.html file and inherit it using template inheritance.
+
+Main steps for inheritance:
+- Find the repetitive parts of your project
+- Create a base template of them
+- Set the tags in the base template
+- Extend and call those tags anywhere
+
+Example of base.html
+
+<links to JS, CSS, Bootstrap>
+<bunch of html like navbars>
+<body>
+  {% block body_block %}
+  {% endblock %}
+</body>
+</More footer html>
+
+Example of other html which inherit from base.html
+
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% block body_block%}  
+	<HTML specific for other.html>
+	<HTML specific for other.html>
+{% endblock %}
+
+###### Template Filters and Custom Filters
+- Template filters allow you to effect the injection before displaying it to the user
+- The general form for a template filter is(but not all filters take in parameteres):
+{{ value | filter:”parameter” }}
+
+
+### 20. Django Level Five
+
+Focus on user authentication. Some built-in tools need to know:
+- Users and the User Model
+- Permissions
+- Groups
+- Passwords and Authentication
+- Logging In and Out
+
+
+###### Django Passwords
+
+How to create authentication for users:
+- Use some built-in apps and make sure they are under the INSTALLED_APPS list in settings.py
+- The apps we will use are "django.contrib.auth" and "django.contrib.contenttypes"
+- Often these will already be pre-loaded in the list for you.
+- Remember to migrate if you added them!
+
+How to make sure password is safe:
+- Never store passwords as plain text!
+- We will begin by using the default PBKDF2 algorithm with an SHA256 hash that is built-in to Django(bcrypt and Argon2)
+- We can also add in validator options to prevent a user from using a very weak password, such as “password123”.
+
+###### User Models 
+
+We already know that we can create Users model in models.py with specific attributes. Sometimes you will also want to add more attributes to a user, such as their own links or a profile image.You can do this in your applications models.py file by creating another class that has a relationship to the User class.
+
+Once you’ve created this model you’ll have to remember to register it in the admin.py file, with something like:
+admin.site.register(UserProfileInfo)
+
+
+Normally, here is how the project should be organized:
+- Typically images, CSS, JS, etc. all go in the static folder of your project, with the STATIC_ROOT variable path defined inside of settings.py
+- User uploaded content will go to the media folder, with the MEDIA_ROOT.
+- we will want to implement a Django form that the User can use to work with the website 
+=> we need to create form.py.
+
+To sum up, we've discussed:
+- User Model
+- Media Directory
+- Handling images
+- User Form
+
+###### Coding User Models and Forms
+
+
+
+
 
 
 
