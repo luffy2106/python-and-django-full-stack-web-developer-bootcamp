@@ -550,6 +550,29 @@ To sum up, we've discussed:
 - User Form
 
 ###### Coding User Models and Forms
+Practice coding
+
+###### Registration
+- Coding for working with Users and Authorization happens in the views.py file. 
+- The basic idea is that we check if there is a POST request and then perform some sort of action based off that information.
+- Sometimes we will want to save that information directly to the database. Other times, we will set commit=False so we can manipulate the data before saving it to the database.
+- Registration view is an extension of Django Forms
+
+###### Login
+
+Steps:
+- Setting up the login views
+- Using built-in decorators for access
+- Adding the LOGIN_URL in settings
+- Creating the login.html
+- Editing the urls.py files
+
+
+
+
+
+
+
 
 
 
