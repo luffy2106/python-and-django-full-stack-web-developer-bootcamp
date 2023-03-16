@@ -572,17 +572,62 @@ Steps:
 
 You can deploy your project to Python Anywhere website
 
+### 21. Advanced topics CBVS
+
+CBVs stands for Class-Based Views in Django. It's a way of defining views in Django using classes instead of functions. CBVs provide a powerful way to reuse code and avoid repetition in your views.
+
+In CBVs, a view is defined as a class that inherits from one of Django's pre-built view classes. These pre-built view classes define common behavior for views, such as handling GET and POST requests, rendering templates, and handling form submissions.
+
+CBVs can also be customized by overriding methods defined in the parent class or by defining additional methods to handle specific functionality. This makes CBVs highly flexible and allows for a great deal of code reuse.
+
+There are several benefits to using CBVs in Django, including:
+
+Reusability: CBVs allow for code reuse and make it easy to create new views based on existing ones.
+
+Separation of concerns: CBVs allow for a clear separation between the view logic and the template rendering.
+
+DRY (Don't Repeat Yourself) code: CBVs help to eliminate repetitive code and reduce the overall codebase.
+
+Easy to test: CBVs can be easily tested using Django's testing framework.
+
+Overall, CBVs are a powerful and flexible way to define views in Django and can help to make your code more maintainable and reusable.
+
+###### Hello World with CBVs
+
+Learn how to use class CBV with as_view() function, to create a view
+
+###### TemplateViews with CBV
 
 
+In Django, TemplateView is a class-based view that is used to render a template. It is a subclass of Django's View class and provides a convenient way to render a template without having to write the code to load the template and render it manually.
+
+To use TemplateView, you need to create a subclass of the TemplateView class and specify the template that you want to render. For example, if you want to render a template called my_template.html, you would create a view like this:
+
+"""
+from django.views.generic import TemplateView
+
+class MyView(TemplateView):
+    template_name = "my_template.html"
+"""
+
+In this example, the template_name attribute specifies the name of the template that will be used to render the view. When a request is made to this view, Django will load the my_template.html template and render it with the context data provided by the view.
+
+You can also override the get_context_data() method of TemplateView to provide additional context data to the template. For example, if you wanted to provide a list of objects to the template, you could do something like this:
+
+"""
+class MyView(TemplateView):
+    template_name = "my_template.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["object_list"] = MyModel.objects.all()
+        return context
+"""
+
+In this example, the get_context_data() method adds a queryset of MyModel objects to the context dictionary, which can then be accessed in the template using the object_list variable.
 
 
-
-
-
-
-
-
-
+###### DetailView and ListView
 
 
 
