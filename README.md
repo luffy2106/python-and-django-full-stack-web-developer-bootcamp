@@ -628,9 +628,30 @@ In this example, the get_context_data() method adds a queryset of MyModel object
 
 
 ###### DetailView and ListView
+Check the demo in lecture to understand.
 
+###### The difference between TemplateView, DetailView and ListView
 
+TemplateView, ListView, and DetailView are all class-based views provided by Django that help developers create views for displaying content in a consistent and reusable way.
 
+Here are the differences between them:
+
+1. TemplateView:
+- It's a simple view that displays a template.
+- It doesn't require any model or query.
+- It's useful when you want to display a static HTML page, like the home page or an about page.
+2. ListView:
+- It displays a list of objects from a specific model.
+- It requires a queryset to define the objects to display.
+- It's useful when you want to display a list of objects, like a list of blog posts or products.
+-It also provides pagination and filtering options.
+3. DetailView:
+- It displays the details of a single object from a specific model.
+- It requires a queryset to define the object to display.
+- It's useful when you want to display the details of an object, like a blog post or product.
+- It also provides a way to handle object not found errors.
+
+In summary, TemplateView is for displaying static HTML pages, ListView is for displaying a list of objects from a model, and DetailView is for displaying the details of a single object from a model.
 
 
 
