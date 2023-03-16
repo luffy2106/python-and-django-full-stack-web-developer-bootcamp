@@ -568,7 +568,9 @@ Steps:
 - Editing the urls.py files
 
 
+### 20. Django deploylement
 
+You can deploy your project to Python Anywhere website
 
 
 
